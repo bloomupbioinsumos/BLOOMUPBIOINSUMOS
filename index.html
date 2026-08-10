@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta name="google-site-verification" content="y46q3va48jb4G9QAMcQNUF8SqOANHzzwX1m4JSVfBGE" />  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BloomUp Biotech — Insumos biotecnológicos para regenerar el suelo</title>
@@ -1369,7 +1368,8 @@
 
   document.querySelectorAll('.prod-toggle').forEach(function(btn){
     btn.addEventListener('click', function(){
-      var detail = btn.closest('.prod-card').querySelector('.prod-detail');
+      var container = btn.closest('.crop-item') || btn.closest('.prod-card');
+      var detail = container.querySelector('.prod-detail');
       var open = detail.classList.toggle('open');
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       btn.querySelector('span').textContent = open ? '−' : '＋';
