@@ -347,8 +347,21 @@
 
   /* ---------- CERTIFICACIONES ---------- */
   .certs{background:var(--cream-soft);}
-  .cert-row{display:grid; grid-template-columns:1fr; gap:16px; margin-top:32px;}
-  @media(min-width:760px){.cert-row{grid-template-columns:repeat(3,1fr);}}
+  .cert-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 32px;
+  }
+  @media(min-width: 760px) {
+    .cert-row {
+      grid-template-columns:repeat(2, 1fr);
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  }
   .cert-card{
     border:1px solid var(--cream-deep); border-radius:16px; padding:24px; text-align:center;
     background:var(--cream);
@@ -1085,12 +1098,6 @@
           <h4>Bioproducto Argentino</h4>
           <p>SJL y Vitalis integran el sello Bioproducto Argentino, que certifica origen e insumos biológicos nacionales.</p>
         </div>
-        <div class="cert-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v18M5 8c0 4 3 7 7 7M19 8c0 4-3 7-7 7"/></svg>
-          <h4>Carbon Neutral+</h4>
-          <p>Empresa comprometida con la reducción de su huella de carbono en toda la cadena productiva.</p>
-        </div>
-      </div>
     </div>
   </section>
   <div class="back-top">
