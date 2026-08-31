@@ -319,30 +319,30 @@
   .rc-tag{display:block; font-family:'IBM Plex Mono'; font-size:.68rem; text-transform:uppercase; letter-spacing:.04em; color:var(--green-deep); margin-bottom:6px;}
   .result-card p{font-size:.85rem; color:#130A04; margin:0;}
   .apply-guide .doses-table td, .apply-guide .doses-table th{font-size:.82rem;}
-  .crop-accordion{margin-top:22px; border-top:1px solid var(--cream-deep);}
-  .crop-item{border-bottom:1px solid var(--cream-deep);}
-  .crop-item .prod-toggle{
-    width:100%; margin:0; border:none; border-radius:0; background:none;
-    padding:14px 4px; font-size:.92rem; font-weight:600; color:#130A04;
-  }
-  .crop-item .prod-toggle:hover{color:var(--green-deep); border-color:transparent;}
-  .crop-item .prod-detail{padding:0 4px;}
-  .crop-item .prod-detail.open{padding:0 4px 16px 4px;}
-  .guide-mini{width:100%; border-collapse:collapse; font-size:.85rem;}
-  .guide-mini td{padding:8px 10px; border-bottom:1px solid var(--cream-deep); color:#130A04;}
-  .guide-mini td:first-child{font-weight:600; color:var(--green-deep); white-space:nowrap;}
-  .guide-mini td:last-child{white-space:nowrap; font-family:'IBM Plex Mono'; font-size:.78rem; color:var(--brown-mid);}
-  .ev-side{display:flex; flex-direction:column; gap:18px;}
-  .ev-stat{
-    background:var(--cream-soft); border:1px solid var(--cream-deep); border-radius:14px; padding:18px 20px;
-  }
-  .ev-stat .num{font-family:'Fredoka'; font-size:1.7rem; color:var(--vitalis); font-weight:600;}
-  .ev-stat p{font-size:.84rem; color:var(--brown); margin:2px 0 0 0;}
-  .doses-table{width:100%; border-collapse:collapse; margin-top:30px; font-size:.86rem;}
-  .doses-table caption{text-align:left; font-family:'IBM Plex Mono'; font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--vitalis); margin-bottom:10px;}
-  .doses-table th, .doses-table td{
-    text-align:left; padding:10px 14px; border-bottom:1px solid var(--cream-deep);
-  }
+.crop-accordion{
+  margin-top:22px; display:flex; flex-direction:column; gap:8px;
+}
+.crop-item .prod-toggle{
+  width:100%; margin:0; border:1px solid var(--brown-mid); border-radius:100px;
+  background:var(--cream-deep); color:var(--green-deep);
+  padding:12px 20px; font-size:.9rem; font-weight:600; font-family:'Nunito';
+  display:flex; align-items:center; gap:10px; cursor:pointer;
+  transition:background .18s ease, border-color .18s ease, color .18s ease;
+}
+.crop-item .prod-toggle:hover{border-color:var(--green-deep);}
+.crop-item.is-open .prod-toggle{
+  background:var(--green-deep); border-color:var(--green-deep); color:var(--cream-soft);
+  border-radius:20px 20px 0 0;
+}
+.crop-icon{font-size:1.1rem; line-height:1; flex-shrink:0;}
+.crop-name{flex:1; text-align:left;}
+.crop-item .chevron{display:inline-flex; flex-shrink:0; transition:transform .25s ease;}
+.crop-item.is-open .chevron{transform:rotate(180deg);}
+.crop-item .prod-detail{
+  padding:0 20px; max-height:0; overflow:hidden; transition:max-height .35s ease;
+  background:var(--cream-deep); border:0 solid var(--brown-mid);
+}
+.crop-item .prod-detail.open{padding:12px 20px 16px 20px; max-height:900px; border-radius:0 0 20px 20px; border-width:0 1px 1px 1px;}
   .doses-table th{font-family:'IBM Plex Mono'; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; color:var(--brown-mid); font-weight:500;}
  /* ---------- CONTACTO ---------- */
   .contacto{}
